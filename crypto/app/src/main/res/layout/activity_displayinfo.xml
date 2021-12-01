@@ -6,57 +6,131 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#B6E4E0"
-    tools:context=".displayinfo">
+    android:background="@android:drawable/progress_indeterminate_horizontal"
+    tools:context=".crypdodirt.displayinfo"
+
+    >
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+
         android:orientation="horizontal"
-     >
-
-
-
+        >
 
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/crypto_image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_margin="10dp"
-            android:src="@drawable/bits"
-            android:scaleType="centerCrop"
             android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bits"
 
             />
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:orientation="vertical">
 
         <TextView
             android:id="@+id/name"
-            android:layout_below="@+id/rank"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/rank"
             android:layout_gravity="center"
             android:layout_margin="1dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-black"
-            android:textAllCaps="true"
             android:text="CryptoName"
+            android:textAllCaps="true"
             android:textColor="#131945"
             android:textSize="23dp"
-            android:layout_marginTop="20dp"
 
             />
 
+        <TextView
+            android:id="@+id/currecy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_gravity="center"
+            android:layout_margin="1dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="BTC"
+            android:textAllCaps="true"
+            android:textColor="#131945"
+            android:textSize="18dp"
 
+            />
+            <TextView
+                android:id="@+id/cryrank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:layout_marginTop="10dp"
+
+                android:text="1"
+                android:textAllCaps="true"
+                android:textColor="#BA3005"
+                android:textSize="18dp"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:orientation="vertical"
+            android:layout_marginTop="7dp"
+      >
+            <TextView
+                android:id="@+id/currentprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rank"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+
+                android:fontFamily="sans-serif-black"
+                android:text="12131314141"
+                android:textAllCaps="true"
+                android:textColor="#151515"
+                android:textSize="16dp"
+
+                />
+
+            <TextView
+                android:id="@+id/pinc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_gravity="center"
+                android:layout_margin="1dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-black"
+                android:text="21"
+                android:textAllCaps="true"
+                android:textColor="#131945"
+                android:textSize="23dp"
+
+                />
+
+        </LinearLayout>
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@drawable/expense_shape"
+
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -74,29 +148,30 @@
                 android:padding="7dp"
                 android:layout_weight="4"
                 android:layout_margin="10dp"
+                android:backgroundTint="#BAFFFFFF"
                 android:background="@drawable/card_shape">
 
                 <TextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="𝕮𝖚𝖗𝖗𝖊𝖓𝖙 𝖕𝖗𝖎𝖈𝖊"
+                    android:text="Max 𝖕𝖗𝖎𝖈𝖊"
 
                     android:textStyle="bold"
                     android:textColor="@color/white"
                     android:textSize="20dp" />
 
                 <TextView
-                    android:id="@+id/currentprice"
+                    android:id="@+id/maxprice"
                     android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="3123123.211565454"
+                    android:text="31256545dhdfhdfhfdh4"
                     android:fontFamily="sans-serif-black"
                     android:textStyle="bold"
-
+                    android:maxLines="1"
                     android:layout_gravity="center"
-                    android:textColor="#291B77"
+                    android:textColor="#B83107"
                     android:textSize="12sp" />
             </LinearLayout>
 
@@ -110,11 +185,13 @@
                 android:padding="5dp"
                 android:layout_weight="0"
                 android:layout_margin="7dp"
+                android:backgroundTint="#BAFFFFFF"
                 android:background="@drawable/card_shape">
 
 
 
                 <TextView
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="𝕾𝖙𝖆𝖙𝖚𝖘"
@@ -134,7 +211,7 @@
                     android:layout_gravity="center"
                     android:fontFamily="sans-serif-black"
                     android:textStyle="bold"
-                    android:textColor="#1B3202"
+                    android:textColor="#00A300"
                     android:textSize="20dp" />
             </LinearLayout>
 
@@ -146,27 +223,46 @@
                 android:padding="7dp"
                 android:layout_weight="3"
                 android:layout_margin="10dp"
+                android:backgroundTint="#BAFFFFFF"
                 android:background="@drawable/card_shape">
 
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="𝕸𝖆𝖝 𝖕𝖗𝖎𝖈𝖊"
+                    android:text="𝕸𝖆rket Cap"
                     android:textStyle="bold"
                     android:textColor="@color/white"
-                    android:textSize="19sp"
+                    android:textSize="14sp"
+android:layout_marginTop="4dp"
                     android:layout_gravity="center"/>
 
                 <TextView
-                    android:id="@+id/maxprice"
+                    android:id="@+id/marketcap"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2134241423"
+                    android:text="21342414888423"
+                    android:maxLines="1"
+                    android:fontFamily="sans-serif-black"
+                    android:textStyle="bold"
+                    android:textColor="#B5340C"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="14dp"
+                    />
+
+                <TextView
+                    android:id="@+id/marketcapdominance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_gravity="center"
+                    android:maxLines="1"
                     android:fontFamily="sans-serif-black"
                     android:textStyle="bold"
                     android:textColor="#2B2E10"
                     android:textSize="15dp"
+                    android:layout_marginLeft="3dp"
                     android:layout_marginTop="10dp"
                     />
             </LinearLayout>
@@ -178,72 +274,158 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:background="@drawable/expense_shape2"
+android:backgroundTint="#7ED83C0B"
             >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+            android:weightSum="3"
+                >
 
                 <LinearLayout
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="110dp"
+                    android:layout_height="115dp"
                     android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_margin="30dp"
+                   android:layout_marginTop="8dp"
+                    android:backgroundTint="#65FFFFFF"
+
+                    android:layout_margin="10dp"
                     android:background="@drawable/icon_card_shape">
 
                     <TextView
+                        android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_margin="5dp"
-
-                        android:text="𝐂𝐮𝐫𝐫𝐞𝐧𝐜𝐲"
+                        android:text="1 Day"
+                        android:layout_marginTop="9dp"
+                        android:textAllCaps="true"
                         android:textAlignment="center"
-                        android:textColor="#131945"
-                        android:textSize="20dp"/>
+                        android:textColor="#0A0C13"
+                        android:textSize="18dp"/>
 
                     <TextView
-                        android:id="@+id/currecy"
+                        android:id="@+id/priceat1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_margin="5dp"
                         android:fontFamily="sans-serif-black"
-                        android:text=" BTC "
+                        android:text=" 1245525 "
+                        android:textStyle="bold"
+                        android:textColor="#F0F1EE"
+                        android:textSize="15dp" />
+                    <TextView
+                        android:id="@+id/priceat1per"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text=" 0.0025 "
                         android:textStyle="bold"
                         android:textColor="#1B290C"
-                        android:textSize="25dp" />
+                        android:textSize="19dp" />
                 </LinearLayout>
-
                 <LinearLayout
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="110dp"
+                    android:layout_height="105dp"
                     android:orientation="vertical"
                     android:gravity="center"
-                    android:layout_margin="30dp"
+                    android:backgroundTint="#65FFFFFF"
+
+                    android:layout_margin="10dp"
                     android:background="@drawable/icon_card_shape">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_margin="3dp"
-                        android:text="𝐌𝐚𝐫𝐤𝐞𝐭 𝐜𝐚𝐩"
-
-                        android:textColor="#131945"
-
-                        android:textSize="19dp" />
+                        android:text="1 Month"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textAlignment="center"
+                        android:textColor="#0A0C13"
+                        android:textSize="16dp"/>
 
                     <TextView
-                        android:id="@+id/marketcap"
+                        android:id="@+id/priceat1m"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_margin="5dp"
-                        android:text="1234242"
+                        android:fontFamily="sans-serif-black"
+                        android:text=" 1245525 "
+                        android:textStyle="bold"
+                        android:textColor="#F0F1EE"
+                        android:textSize="15dp" />
+                    <TextView
+                        android:id="@+id/priceat30per"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text=" 0.0025 "
+                        android:textStyle="bold"
+                        android:textColor="#1B290C"
+                        android:textSize="19dp" />/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                 android:layout_margin="10dp"
+                    android:backgroundTint="#65FFFFFF"
+
+                    android:background="@drawable/icon_card_shape">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="1 Year"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textColor="#0A0C13"
+                        android:textSize="16dp"/>
+
+                    <TextView
+                        android:id="@+id/priceat1y"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text=" 1245525 "
+                        android:textStyle="bold"
+                        android:textColor="#F0F1EE"
+                        android:textSize="15dp" />
+                    <TextView
+                        android:textAllCaps="true"
+                        android:id="@+id/priceatper1y"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text=" 0.0025 "
+                        android:textStyle="bold"
+                        android:textColor="#1B290C"
+                        android:textSize="19dp" /> />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:text=""
                         android:fontFamily="sans-black"
                         android:textColor="#2B2E10"
                         android:textSize="18dp" />
@@ -251,86 +433,20 @@
 
             </LinearLayout>
 
-
-            <LinearLayout
+            <com.github.mikephil.charting.charts.BarChart
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:layout_height="match_parent"
+                android:id="@+id/barChart"
+                >
 
-                <LinearLayout
-                    android:layout_width="150dp"
-                    android:layout_height="147dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_margin="28dp"
-                    android:background="@drawable/icon_card_shape">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dp"
-
-                        android:text="𝐌𝐚𝐱 𝐬𝐮𝐩𝐩𝐥𝐲"
-                        android:textColor="#131945"
-                        android:textSize="19dp"
-                        />
-
-                    <TextView
-                        android:id="@+id/maxsupply"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dp"
-                        android:text=" "
-                        android:fontFamily="saserif-black"
-                        android:textColor="#32257A"
-                        android:layout_marginTop="10dp"
-                        android:textSize="17dp"
-                        />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="150dp"
-                    android:layout_height="148dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_margin="30dp"
-                    android:background="@drawable/icon_card_shape">
-
-                    <TextView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_margin="3dp"
-
-                        android:text="𝐄𝐱𝐜𝐡𝐚𝐧𝐠𝐞"
-                        android:textColor="#131945"
-                        android:textSize="20dp"
-
-                        />
-
-                    <TextView
-                        android:id="@+id/exchange"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dp"
-                        android:text="172176"
-                        android:fontFamily="sans-serif-black"
-                        android:textColor="#2B2E10"
-                        android:textSize="16dp"
-                        android:layout_marginTop="10dp"/>
-                </LinearLayout>
+            </com.github.mikephil.charting.charts.BarChart>
 
             </LinearLayout>
 
         </LinearLayout>
 
 
-    </LinearLayout>
+
 
 
 

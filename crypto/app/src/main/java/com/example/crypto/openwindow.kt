@@ -1,16 +1,13 @@
 package com.example.crypto
 
 import android.content.Intent
-import android.media.MediaPlayer
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.widget.MediaController
 import android.widget.VideoView
-import kotlinx.android.synthetic.main.activity_openwindow.*
+import com.example.crypto.crypdodirt.MainActivity
 import java.util.*
-import kotlin.concurrent.timerTask
 
 class openwindow : AppCompatActivity() {
     val timer = Timer()

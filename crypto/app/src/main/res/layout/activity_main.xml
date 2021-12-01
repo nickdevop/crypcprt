@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,27 +7,36 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#B6E4E0"
-    tools:context=".MainActivity">
+    tools:context=".crypdodirt.MainActivity">
 
    <SearchView
        android:id="@+id/searchview"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:layout_marginTop="10dp"
-
-       android:padding="1dp"
+       android:layout_marginTop="4dp"
+       app:layout_constraintBottom_toTopOf="@+id/Recycler"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       android:padding="3dp"
        android:queryHint="search for crypto coin "
        android:background="@drawable/card_shape"
 
-
+       android:focusable="true"
+       app:iconifiedByDefault="true"
        >
 
    </SearchView>
 
    <androidx.recyclerview.widget.RecyclerView
        android:id="@+id/Recycler"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
+       android:layout_width="0dp"
+       android:layout_height="0dp"
+       android:layout_marginTop="4dp"
+       app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/searchview"
        tools:listitem="@layout/lists"
      android:layout_below="@+id/searchview"
 >
@@ -35,4 +44,16 @@
 
    </androidx.recyclerview.widget.RecyclerView>
 
-</RelativeLayout>
+   <com.google.android.material.bottomnavigation.BottomNavigationView
+       android:id="@+id/bottom_navigation"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="1dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/Recycler"
+       app:menu="@menu/mainbottom" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
